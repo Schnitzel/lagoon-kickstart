@@ -3,117 +3,84 @@ services:
     amazeeio:
       type: custom
       template: services/api/.amazeeio.app.yml
-    build:
-      dockerfile: Dockerfile
-      context: services/api
+    image: amazeeiolagoon/api:feature-docs
   elasticsearch:
     amazeeio:
       type: custom
       template: services/elasticsearch/.amazeeio.app.yml
-    build:
-      dockerfile: Dockerfile
-      context: services/elasticsearch/
+    image: amazeeiolagoon/elasticsearch:feature-docs
   kibana:
     amazeeio:
       type: custom
       template: services/kibana/.amazeeio.app.yml
-    build:
-      dockerfile: Dockerfile
-      context: services/kibana
+    image: amazeeiolagoon/kibana:feature-docs
   logs2slack:
     amazeeio:
       type: custom
       template: services/logs2slack/.amazeeio.app.yml
-    build:
-      dockerfile: Dockerfile
-      context: services/logs2slack
+    image: amazeeiolagoon/logs2slack:feature-docs
   logstash:
     amazeeio:
       type: custom
       template: services/logstash/.amazeeio.app.yml
-    build:
-      dockerfile: Dockerfile
-      context: services/logstash
+    image: amazeeiolagoon/logstash:feature-docs
   openshiftdeploy:
     amazeeio:
       type: custom
       template: services/openshiftdeploy/.amazeeio.app.yml
-    build:
-      dockerfile: Dockerfile
-      context: services/openshiftdeploy
+    image: amazeeiolagoon/openshiftdeploy:feature-docs
   openshiftremove:
     amazeeio:
       type: custom
       template: services/openshiftremove/.amazeeio.app.yml
-    build:
-      dockerfile: Dockerfile
-      context: services/openshiftremove
+    image: amazeeiolagoon/openshiftremove:feature-docs
   openshiftremove-resources:
     amazeeio:
       type: custom
       template: services/openshiftremove-resources/.amazeeio.app.yml
-    build:
-      dockerfile: Dockerfile
-      context: services/openshiftremove-resources
+    image: amazeeiolagoon/openshiftremove-resources:feature-docs
   rabbitmq:
     amazeeio:
       type: custom
       template: services/rabbitmq/.amazeeio.app.yml
-    build:
-      dockerfile: Dockerfile
-      context: services/rabbitmq
+    image: amazeeiolagoon/rabbitmq:feature-docs
   rest2tasks:
     amazeeio:
       type: custom
       template: services/rest2tasks/.amazeeio.app.yml
-    build:
-      dockerfile: Dockerfile
-      context: services/rest2tasks
+    image: amazeeiolagoon/rest2tasks:feature-docs
   webhook-handler:
     amazeeio:
       type: custom
       template: services/webhook-handler/.amazeeio.app.yml
-    build:
-      dockerfile: Dockerfile
-      context: services/webhook-handler
+    image: amazeeiolagoon/webhook-handler:feature-docs
   webhooks2tasks:
     amazeeio:
       type: custom
       template: services/webhooks2tasks/.amazeeio.app.yml
-    build:
-      dockerfile: Dockerfile
-      context: services/webhooks2tasks
+    image: amazeeiolagoon/webhooks2tasks:feature-docs
   drush-alias:
     amazeeio:
       type: nginx:1.12
       template: helpers/drush-alias/.amazeeio.nginx.yml
-    build:
-      context: helpers/drush-alias
-      dockerfile: Dockerfile
+    image: amazeeiolagoon/drush-alias:feature-docs
   auth-server:
     amazeeio:
       type: custom
       template: services/auth-server/.amazeeio.app.yml
-    build:
-      dockerfile: Dockerfile
-      context: services/auth-server
+    image: amazeeiolagoon/auth-server:feature-docs
   auth-ssh:
     amazeeio:
       type: custom
       template: services/auth-ssh/.amazeeio.app.yml
-    build:
-      dockerfile: services/auth-ssh/Dockerfile
+    image: amazeeiolagoon/auth-ssh:feature-docs
   jenkins:
     amazeeio:
       type: custom
       template: services/jenkins/.amazeeio.app.yml
-    build:
-      dockerfile: Dockerfile
-      context: services/jenkins
+    image: amazeeiolagoon/jenkins:feature-docs
   jenkins-slave:
     amazeeio:
       type: custom
       template: services/jenkins-slave/.amazeeio.app.yml
-    build:
-      dockerfile: Dockerfile
-      context: services/jenkins-slave
+    image: amazeeiolagoon/jenkins-slave:feature-docs
